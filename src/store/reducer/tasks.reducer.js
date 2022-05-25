@@ -9,6 +9,8 @@ export const tasksReducer = (oldState = tasksState, action) => {
     return {
       ...oldState,
       list: [
+        ...oldState.list,
+        action.payload,
         /* add new task from action.payload */
       ],
     };

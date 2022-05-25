@@ -12,4 +12,7 @@ export const decreaseAction = (payload) => ({
 export const resetAction = () => ({ type: actionTypes.RESET });
 
 /* addTaskAction creator */
-export const addTaskAction = (payload) => ({ type: actionTypes.ADD_TASK, payload });
+export const addTaskAction = (payload) => ({
+  type: actionTypes.ADD_TASK,
+  payload,
+});

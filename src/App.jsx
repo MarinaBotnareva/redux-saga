@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
 import { incrementAction, decreaseAction, resetAction } from './store/actions/actionCreators';
+import Tasks from './components/Tasks';
 
 function App (props) {
-  console.log(props);
-
   const actionIncrement = () => {
     props.dispatch(incrementAction());
   }
@@ -24,6 +23,8 @@ function App (props) {
         <button onClick={actionIncrement}>+</button>
         <button onClick={actionReset}>Reset</button>
       </div>
+
+      <Tasks />
     </div>
   )
 }
@@ -39,7 +40,6 @@ Consumer
  */
 
 const mapStateToProps = (store) => {
-  console.log(store);
   return { counter: store.counter };
 }
 

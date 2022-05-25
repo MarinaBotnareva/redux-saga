@@ -4,20 +4,28 @@ import { addTaskAction } from '../../store/actions/actionCreators'
 
 export const Tasks = props => {
   return (
-    <div>
+    <div style={{ border: '1px solid black' }}>
       <button
         onClick={() => {
-            // props.dispatch({ type: actionTypes.ADD_TASK, payload: { text: ... })
-            props.dispatch(addTaskAction({ text: 'test text', isDone: false }))
+          // props.dispatch({ type: actionTypes.ADD_TASK, payload: { text: ... } });
+          const action = addTaskAction({ id: Math.random(), text: 'test text', isDone: true })
+          props.dispatch(action);
         }}
-      >Add task</button>
+      >
+        Add task
+      </button>
       <ul>
-        {props.tasks.map(/* create task list */ () => <></>)}
+        {props.tasks.list.map(
+          /* create task list */
+          (task) => (
+            <li key={task.id}>{ task.text }</li>
+          )
+        )}
       </ul>
     </div>
   )
 }
 
-const mapStateToProps = store => ({ tasks: store.tasks });
+const mapStateToProps = store => ({ tasks: store.tasks })
 
 export default connect(mapStateToProps)(Tasks);
