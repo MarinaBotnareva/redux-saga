@@ -16,3 +16,10 @@ export const addTaskAction = (payload) => ({
   type: actionTypes.ADD_TASK,
   payload,
 });
+
+export const registerUserAction = (payload) => ({
+  type: actionTypes.REGISTER_USER,
+  payload,
+});
+
+export const registerUserActionError = () => {};
