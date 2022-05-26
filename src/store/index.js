@@ -4,7 +4,7 @@ import {
 } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 
-import { globalReducer } from './reducer';
+import { globalReducer } from './reducers';
 import { rootSaga, sagaMiddleware } from './sagas';
 
 

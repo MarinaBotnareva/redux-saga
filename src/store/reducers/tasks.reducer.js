@@ -2,6 +2,8 @@ import actionTypes from "../actions/actionTypes";
 
 const tasksState = {
   list: [],
+  isLoading: false,
+  error: null,
 };
 
 export const tasksReducer = (oldState = tasksState, action) => {
