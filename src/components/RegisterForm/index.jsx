@@ -27,7 +27,6 @@ export const RegisterForm = props => {
   function onSubmit (e) {
     e.preventDefault();
     
-    console.log(formData);
     const action = registerUserAction(formData)
     props.dispatch(action)
   }

@@ -4,7 +4,8 @@ const actionTypes = {
     RESET: 'reset',
     ADD_TASK: 'addTask',
 
-    REGISTER_USER: 'registerUser',
+    REGISTER_USER_REQUEST: 'registerUserRequest',
+    REGISTER_USER_SUCCESS: 'registerUserSuccess',
     REGISTER_USER_ERROR: 'registerUserError',
 }
 

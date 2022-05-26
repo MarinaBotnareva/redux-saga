@@ -18,8 +18,16 @@ export const addTaskAction = (payload) => ({
 });
 
 export const registerUserAction = (payload) => ({
-  type: actionTypes.REGISTER_USER,
+  type: actionTypes.REGISTER_USER_REQUEST,
   payload,
 });
 
-export const registerUserActionError = () => {};
+export const registerUserActionSuccess = (payload) => ({
+  type: actionTypes.REGISTER_USER_SUCCESS,
+  payload,
+});
+
+export const registerUserActionError = (payload) => ({
+  type: actionTypes.REGISTER_USER_ERROR,
+  payload,
+});

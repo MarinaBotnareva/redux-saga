@@ -1,10 +1,13 @@
 import axios from 'axios';
 
 export const registerUser = async (user) => {
-    const response = await axios.post('http://localhost:5000/api/register', user);
+  const response = await axios.post(
+    'https://jsonplaceholder.typicode.com/users',
+    user
+  );
 
-    return response.data;
-}
+  return response.data;
+};
 
 /* 
     promise = axios.post()
