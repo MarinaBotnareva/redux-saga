@@ -12,10 +12,6 @@ export const decreaseAction = (payload) => ({
 export const resetAction = () => ({ type: actionTypes.RESET });
 
 /* addTaskAction creator */
-export const addTaskAction = (payload) => ({
-  type: actionTypes.ADD_TASK,
-  payload,
-});
 
 export const registerUserAction = (payload) => ({
   type: actionTypes.REGISTER_USER_REQUEST,
@@ -29,5 +25,20 @@ export const registerUserActionSuccess = (payload) => ({
 
 export const registerUserActionError = (payload) => ({
   type: actionTypes.REGISTER_USER_ERROR,
+  payload,
+});
+
+export const createTaskAction = (payload) => ({
+  type: actionTypes.TASK_CREATE_REQUEST,
+  payload,
+});
+
+export const createTaskActionSuccess = (payload) => ({
+  type: actionTypes.TASK_CREATE_SUCCESS,
+  payload,
+});
+
+export const createTaskActionError = (payload) => ({
+  type: actionTypes.TASK_CREATE_ERROR,
   payload,
 });

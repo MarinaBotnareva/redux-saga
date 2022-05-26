@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTaskAction } from '../../store/actions/actionCreators'
+import { createTaskAction } from '../../store/actions/actionCreators'
 
 export const Tasks = props => {
   return (
@@ -8,7 +8,7 @@ export const Tasks = props => {
       <button
         onClick={() => {
           // props.dispatch({ type: actionTypes.ADD_TASK, payload: { text: ... } });
-          const action = addTaskAction({ id: Math.random(), text: 'test text', isDone: true })
+          const action = createTaskAction({ text: 'test text', isDone: true })
           props.dispatch(action);
         }}
       >

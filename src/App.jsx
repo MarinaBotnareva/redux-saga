@@ -7,8 +7,8 @@ function App (props) {
 
   return (
     <div>
-      {/* <Tasks /> */}
-      <RegisterForm />
+      <Tasks />
+      {/* <RegisterForm /> */}
     </div>
   )
 }

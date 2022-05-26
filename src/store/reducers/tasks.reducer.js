@@ -1,4 +1,4 @@
-import actionTypes from "../actions/actionTypes";
+import actionTypes from '../actions/actionTypes';
 
 const tasksState = {
   list: [],
@@ -7,14 +7,27 @@ const tasksState = {
 };
 
 export const tasksReducer = (oldState = tasksState, action) => {
-  if (action.type === actionTypes.ADD_TASK) {
+  console.log(action);
+  if (action.type === actionTypes.TASK_CREATE_REQUEST) {
     return {
       ...oldState,
-      list: [
-        ...oldState.list,
-        action.payload,
-        /* add new task from action.payload */
-      ],
+      isLoading: true,
+    };
+  }
+
+  if (action.type === actionTypes.TASK_CREATE_SUCCESS) {
+    return {
+      ...oldState,
+      isLoading: false,
+      list: [...oldState.list, action.payload],
+    };
+  }
+
+  if (action.type === actionTypes.TASK_CREATE_ERROR) {
+    return {
+      ...oldState,
+      isLoading: false,
+      error: action.payload,
     };
   }
 

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const registerUser = async (user) => {
+export const registerUserRequest = async (user) => {
   const response = await axios.post(
     'https://jsonplaceholder.typicode.com/users',
     user
@@ -9,24 +9,11 @@ export const registerUser = async (user) => {
   return response.data;
 };
 
-/* 
-    promise = axios.post()
-    result = await axios.post()
+export const createTaskRequest = async (task) => {
+  const response = await axios.post(
+    'https://jsonplaceholder.typicode.com/todos',
+    task
+  );
 
-    promise.then(result => {
-
-    })
-
-    response = await fetch('')
-    data = await response.json()
-
-    fetch('')
-    .then(response => {
-        return response.json();
-    })
-    .then((data) => {
-        
-    })
-
-    
-*/
+  return response.data;
+};

@@ -7,7 +7,7 @@ import actionTypes from '../actions/actionTypes';
 // worker Saga
 export function* registerUser(action) {
     try {
-        const result = yield call(api.registerUser, action.payload);
+        const result = yield call(api.registerUserRequest, action.payload);
         yield put(registerUserActionSuccess(result));
     } catch (error) {
         yield put(registerUserActionError(error));
