@@ -1,44 +1,16 @@
 import actionTypes from './actionTypes';
 
-export const incrementAction = (payload) => {
-  return { type: actionTypes.INCREMENT, payload };
-};
-
-export const decreaseAction = (payload) => ({
-  type: actionTypes.DECREMENT,
+export const createCommentAction = (payload) => ({
+  type: actionTypes.COMMENT_CREATE_REQUEST,
   payload,
 });
 
-export const resetAction = () => ({ type: actionTypes.RESET });
-
-/* addTaskAction creator */
-
-export const registerUserAction = (payload) => ({
-  type: actionTypes.REGISTER_USER_REQUEST,
+export const createCommentActionSuccess = (payload) => ({
+  type: actionTypes.COMMENT_CREATE_SUCCESS,
   payload,
 });
 
-export const registerUserActionSuccess = (payload) => ({
-  type: actionTypes.REGISTER_USER_SUCCESS,
-  payload,
-});
-
-export const registerUserActionError = (payload) => ({
-  type: actionTypes.REGISTER_USER_ERROR,
-  payload,
-});
-
-export const createTaskAction = (payload) => ({
-  type: actionTypes.TASK_CREATE_REQUEST,
-  payload,
-});
-
-export const createTaskActionSuccess = (payload) => ({
-  type: actionTypes.TASK_CREATE_SUCCESS,
-  payload,
-});
-
-export const createTaskActionError = (payload) => ({
-  type: actionTypes.TASK_CREATE_ERROR,
+export const createCommentActionError = (payload) => ({
+  type: actionTypes.COMMENT_CREATE_ERROR,
   payload,
 });

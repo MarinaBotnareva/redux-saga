@@ -1,33 +1,12 @@
-import { connect } from 'react-redux';
+import Comments from './components/Comments';
 
-import Tasks from './components/Tasks';
-import RegisterForm from './components/RegisterForm';
-
-function App (props) {
+function App () {
 
   return (
     <div>
-      <Tasks />
-      {/* <RegisterForm /> */}
+      <Comments />
     </div>
   )
 }
 
-/* 
-Consumer
-  {store => {
-    // mapStateToProps
-    const props = store.counter;
-    return <Component {...props} />;
-  }
-/Consumer
- */
-
-const mapStateToProps = (store) => {
-  return { counter: store.counter };
-}
-
-// HOC
-const withStore = connect(mapStateToProps);
-
-export default withStore(App);
+export default App;

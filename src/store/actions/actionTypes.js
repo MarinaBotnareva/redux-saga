@@ -1,15 +1,8 @@
 const actionTypes = {
-    INCREMENT: 'increment',
-    DECREMENT: 'decrement',
-    RESET: 'reset',
-    
-    REGISTER_USER_REQUEST: 'registerUserRequest',
-    REGISTER_USER_SUCCESS: 'registerUserSuccess',
-    REGISTER_USER_ERROR: 'registerUserError',
-    
-    TASK_CREATE_REQUEST: 'taskCreateRequest',
-    TASK_CREATE_SUCCESS: 'taskCreateSuccess',
-    TASK_CREATE_ERROR: 'taskCreateError',
+
+    COMMENT_CREATE_REQUEST: 'commentCreateRequest',
+    COMMENT_CREATE_SUCCESS: 'commentCreateSuccess',
+    COMMENT_CREATE_ERROR: 'commentCreateError',
 }
 
 export default actionTypes;

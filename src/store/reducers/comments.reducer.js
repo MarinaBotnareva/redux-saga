@@ -1,21 +1,21 @@
 import actionTypes from '../actions/actionTypes';
 
-const tasksState = {
+const commentsState = {
   list: [],
   isLoading: false,
   error: null,
 };
 
-export const tasksReducer = (oldState = tasksState, action) => {
+export const commentsReducer = (oldState = commentsState, action) => {
   console.log(action);
-  if (action.type === actionTypes.TASK_CREATE_REQUEST) {
+  if (action.type === actionTypes.COMMENT_CREATE_REQUEST) {
     return {
       ...oldState,
       isLoading: true,
     };
   }
 
-  if (action.type === actionTypes.TASK_CREATE_SUCCESS) {
+  if (action.type === actionTypes.COMMENT_CREATE_SUCCESS) {
     return {
       ...oldState,
       isLoading: false,
@@ -23,7 +23,7 @@ export const tasksReducer = (oldState = tasksState, action) => {
     };
   }
 
-  if (action.type === actionTypes.TASK_CREATE_ERROR) {
+  if (action.type === actionTypes.COMMENT_CREATE_ERROR) {
     return {
       ...oldState,
       isLoading: false,

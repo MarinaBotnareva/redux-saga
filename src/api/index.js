@@ -1,18 +1,9 @@
 import axios from 'axios';
 
-export const registerUserRequest = async (user) => {
+export const createCommentRequest = async (comment) => {
   const response = await axios.post(
-    'https://jsonplaceholder.typicode.com/users',
-    user
-  );
-
-  return response.data;
-};
-
-export const createTaskRequest = async (task) => {
-  const response = await axios.post(
-    'https://jsonplaceholder.typicode.com/todos',
-    task
+    'https://jsonplaceholder.typicode.com/comments',
+    comment
   );
 
   return response.data;
